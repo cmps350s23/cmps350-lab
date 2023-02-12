@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Contact</title>
+  </head>
+  <body>
+    <header>
+      <h1>HTML Contact</h1>
+      <div>
+        <img
+          src="images/andrew-ridley-jR4Zf-riEjI-unsplash.jpg"
+          width="100%"
+          alt="header image"
+        />
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="contact-us.html">Contact Us</a>
+      </nav>
+    </header>
+    <main>
+      <form>
+        <div>
+          <label for="full-name">Full name</label>
+          <input
+            id="full-name"
+            name="full-name"
+            type="text"
+            placeholder="Jane Doe"
+            required
+          />
+        </div>
+        <div>
+          <label for="phone-number">Phone number</label>
+          <input
+            id=""
+            type="phone-number"
+            name="phone-number"
+            placeholder="+974 #### ####"
+            pattern="\+974 [0-9]{4} [0-9]{4}"
+            required
+          />
+        </div>
+        <div>
+          <label for="email-address">Email address</label>
+          <input
+            id="email-address"
+            type="email"
+            name="email"
+            pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*"
+            placeholder="jane@doe.com"
+            required
+          />
+        </div>
+        <div>
+          <label>Gender</label>
+          <input
+            id="gender-male"
+            name="gender"
+            value="gender-male"
+            type="radio"
+          />
+          <label for="gender-male">Male</label>
+          <input
+            id="gender-female"
+            name="gender"
+            value="gender-female"
+            type="radio"
+            checked
+          />
+          <label for="gender-female">Female</label>
+        </div>
+        <div>
+          <label for="date-of-birth">Date of birth</label>
+          <input id="date-of-birth" name="date-of-birth" type="date" required />
+        </div>
+        <div>
+          <label>Methods of contact</label>
+          <input id="contact-phone" name="contact-phone" type="checkbox" />
+          <label for="contact-phone">Phone</label>
+          <input id="contact-email" name="contact-email" type="checkbox" />
+          <label for="contact-email">Email</label>
+          <input id="contact-sms" name="contact-sms" type="checkbox" />
+          <label for="contact-sms">SMS</label>
+        </div>
+        <div>
+          <label for="rating">Rating</label>
+          <select id="rating" name="rating" required>
+            <option value="" disabled>—</option>
+            <option value="excellent">Excellent</option>
+            <option value="very-good">Very good</option>
+            <option value="good">Good</option>
+            <option value="poor">Poor</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </main>
+    <footer>&copy; 2023</footer>
+  </body>
+</html>

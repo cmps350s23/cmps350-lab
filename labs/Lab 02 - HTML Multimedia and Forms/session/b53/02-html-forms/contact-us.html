@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Contact Us</h1>
+      <img src="images/banner.jpg" alt="Banner image" width="100%" />
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="contact-us.html">Contact us</a>
+      </nav>
+    </header>
+    <main>
+      <form>
+        <div>
+          <label for="full-name">Full name</label>
+          <input
+            id="full-name"
+            name="full-name"
+            placeholder="Jane Doe"
+            required
+          />
+        </div>
+        <div>
+          <label for="phone-number">Phone number</label>
+          <input
+            id="phone-number"
+            placeholder="+974 #### ####"
+            pattern="\+974 [0-9]{4} [0-9]{4}"
+            required
+          />
+        </div>
+        <div>
+          <label for="email-address">Email address</label>
+          <input
+            id="email-address"
+            type="email"
+            placeholder="email address"
+            required
+          />
+        </div>
+        <div>
+          <label>Gender</label>
+          <label for="male-gender">Male</label>
+          <input id="male-gender" name="gender" value="male" type="radio" />
+          <label for="female-gender">Female</label>
+          <input
+            id="female-gender"
+            name="gender"
+            value="female"
+            type="radio"
+            checked
+          />
+        </div>
+        <div>
+          <label for="birth-date">Date of birth</label>
+          <input id="birth-date" type="date" required />
+        </div>
+        <div>
+          <label>Contact</label>
+          <input id="phone-contact" name="phone-contact" type="checkbox" />
+          <label for="phone-contact">Phone</label>
+          <input id="email-contact" name="email-contact" type="checkbox" />
+          <label for="email-contact">Email</label>
+          <input id="sms-contact" name="sms-contact" type="checkbox" />
+          <label for="sms-contact">SMS</label>
+        </div>
+        <div>
+          <label for="rating">Rating</label>
+          <select id="rating" name="rating" required>
+            <option value="" disabled>—</option>
+            <option value="excellent">Excellent</option>
+            <option value="very-good">Very Good</option>
+            <option value="good">Good</option>
+            <option value="poor">Poor</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea name="message" placeholder="Your message"></textarea>
+        </div>
+
+        <div>
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+    </main>
+    <footer>&copy; 2023</footer>
+  </body>
+</html>
