@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+span.rouge {
+  color: red;
+}
+
+.rouge {
+  color: blue;
+}
+
+.cool {
+  border: solid 1px black;
+  padding: 0.25em 0.5em;
+  margin: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50em;
+  text-align: center;
+}
+
+#i {
+  border: solid 1px #74bdcb;
+  background-color: lightsalmon;
+  padding: 10px;
+  width: 100px;
+  height: 20px;
+}

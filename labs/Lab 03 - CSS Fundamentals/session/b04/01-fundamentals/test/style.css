@@ -1,0 +1,36 @@
+#cool-par {
+  color: magenta;
+}
+
+main > p {
+  color: gray;
+}
+
+p {
+  color: cyan;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#box {
+  margin: 5ex 5em;
+  border: solid 1px;
+  height: 50px;
+  padding: 10px;
+}
+
+#cool-span {
+  border: solid 1px;
+  /* padding: 5px; */
+  height: 1000px;
+  /* margin: 10px; */
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #777;
+  opacity: 0.4;
+}
