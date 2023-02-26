@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  color: #111111;
+}
+
+body {
+  background-color: #fff7ec;
+  font-size: 1.3em;
+  margin: 2rem;
+}
+
+main {
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+header {
+  border-bottom: #ef6548 solid 1px;
+}
+
+footer {
+  border-top: #ef6548 solid 1px;
+}
+
+footer > p {
+  text-align: center;
+}
+
+ul {
+  list-style-type: square;
+}
+
+figure {
+  text-align: center;
+  padding: 2em 0;
+  margin: 0;
+  border: #fdbb84 solid 1px;
+  border-radius: 20px;
+}
+
+figure > img {
+  width: min(calc(720px - 2em), calc(100% - 2em));
+}
+
+figure > figcaption {
+  margin-top: 0.5em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  color: #b30000;
+  font-family: sans-serif;
+}
+
+h1,
+h2 {
+  font-weight: bolder;
+}
+
+a {
+  color: #ef6548;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b30000;
+}
+
+a::before {
+  display: inline-block;
+  content: url("../icons/link-2.svg");
+  margin-inline-end: 0.3em;
+  transform: scale(0.85) translateY(0.175em);
+}
+
+.inline-icon {
+  height: 1em;
+  margin-bottom: -0.175em;
+}
+
+a > .inline-icon {
+  padding-inline-end: 0.3em;
+}
+
+#navigation ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+#navigation ul > li {
+  display: inline;
+}
+
+#navigation li + li {
+  margin-inline-start: 0.5em;
+}
+
+#site-navigation {
+  font-size: 1.05em;
+}
+
+#section-navigation {
+  font-size: 0.9em;
+}
+
+#navigation a::before {
+  content: "";
+  margin-inline-end: 0.2em;
+  transform: none;
+}
+
+#navigation ul > li.current > a {
+  color: #7f0000;
+}
+
+#sections {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+}
+
+#sections > section {
+  /* flex: 0 0 calc(33.33% - 1em); */
+  /* flex-basis: calc(33.33% - 1em);
+  flex-grow: 0;
+  flex-shrink: 0; */
+}
+
+/* #sections > section#history {
+  flex-grow: 10;
+} */
+
+@media print {
+  * {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #sections > section {
+    flex-basis: calc(50% - 1em);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #sections > section {
+    flex-basis: calc(33.33% - 1em);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #sections > section {
+    flex-basis: calc(25% - 1em);
+  }
+}
+
+/* @media screen and (min-width: ) { */
+body {
+  display: grid;
+  grid-template-columns: 240px auto;
+  grid-template-rows: auto auto;
+}
+
+footer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+/* } */

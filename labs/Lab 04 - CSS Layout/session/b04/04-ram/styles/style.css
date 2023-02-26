@@ -1,0 +1,13 @@
+main {
+  display: grid;
+}
+
+/* @media screen and (min-width: 400px) { */
+main {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+/* } */
+
+figure > img {
+  width: 100%;
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantum Computing</title>
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div id="navigation">
+        <nav id="site-navigation">
+          <ul>
+            <li class="current">
+              <a href="quantum.html"
+                ><img
+                  class="inline-icon"
+                  src="icons/home.svg"
+                  alt="home icon"
+                />Quantum</a
+              >
+            </li>
+            <li>
+              <a href="qubit.html"
+                ><img
+                  class="inline-icon"
+                  src="icons/code.svg"
+                  alt="code icon"
+                />Qubit</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav id="section-navigation">
+          <ul>
+            <li>
+              <a href="#history"
+                ><img
+                  class="inline-icon"
+                  src="icons/hash.svg"
+                  alt="section icon"
+                />History</a
+              >
+            </li>
+            <li>
+              <a href="#algorithms"
+                ><img
+                  class="inline-icon"
+                  src="icons/hash.svg"
+                  alt="section icon"
+                />Algorithms</a
+              >
+            </li>
+            <li>
+              <a href="#engineering"
+                ><img
+                  class="inline-icon"
+                  src="icons/hash.svg"
+                  alt="section icon"
+                />Engineering</a
+              >
+            </li>
+            <li>
+              <a href="#theory"
+                ><img
+                  class="inline-icon"
+                  src="icons/hash.svg"
+                  alt="section icon"
+                />Theory</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>Quantum computing</h1>
+      <p>
+        A <strong>quantum computer</strong> is a computer that exploits quantum
+        mechanical phenomena. At small scales, physical matter exhibits
+        properties of both particles and waves, and quantum computing leverages
+        this behavior using specialized hardware. Classical physics cannot
+        explain the operation of these quantum devices, and a scalable quantum
+        computer could perform some calculations exponentially faster than any
+        modern “classical” computer. In particular, a large-scale quantum
+        computer could break widely-used encryption schemes and aid physicists
+        in performing physical simulations; however, the current state of the
+        art is still largely experimental and impractical.
+      </p>
+      <figure>
+        <img
+          src="images/IBM_Q_system_(Fraunhofer_2).jpg"
+          alt="IBM Q System One"
+          width="100%"
+        />
+        <figcaption>
+          IBM Q System One, a quantum computer with 20 superconducting qubits
+        </figcaption>
+      </figure>
+      <p>
+        The basic unit of information in quantum computing is the qubit, similar
+        to the bit in traditional digital electronics. Unlike a classical bit, a
+        qubit can exist in a superposition of its two “basis” states, which
+        loosely means that it is in both states simultaneously. When measuring a
+        qubit, the result is a probabilistic output of a classical bit. If a
+        quantum computer manipulates the qubit in a particular way, wave
+        interference effects can amplify the desired measurement results. The
+        design of quantum algorithms involves creating procedures that allow a
+        quantum computer to perform calculations efficiently.
+      </p>
+      <p>
+        Physically engineering high-quality qubits has proven challenging. If a
+        physical qubit is not sufficiently isolated from its environment, it
+        suffers from quantum decoherence, introducing noise into calculations.
+        National governments have invested heavily in experimental research that
+        aims to develop scalable qubits with longer coherence times and lower
+        error rates. Two of the most promising technologies are superconductors
+        (which isolate an electrical current by eliminating electrical
+        resistance) and ion traps (which confine a single atomic particle using
+        electromagnetic fields).
+      </p>
+      <p>
+        Any computational problem that can be solved by a classical computer can
+        also be solved by a quantum computer. Conversely, any problem that can
+        be solved by a quantum computer can also be solved by a classical
+        computer, at least in principle given enough time. In other words,
+        quantum computers obey the Church-Turing thesis. This means that while
+        quantum computers provide no additional advantages over classical
+        computers in terms of computability, quantum algorithms for certain
+        problems have significantly lower time complexities than corresponding
+        known classical algorithms. Notably, quantum computers are believed to
+        be able to quickly solve certain problems that no classical computer
+        could solve in any feasible amount of time—a feat known as “quantum
+        supremacy.” The study of the computational complexity of problems with
+        respect to quantum computers is known as quantum complexity theory.
+      </p>
+
+      <div id="sections">
+        <section id="history">
+          <h2>History</h2>
+          <p>
+            For many years, the fields of quantum mechanics and computer science
+            formed distinct academic communities. Modern quantum theory
+            developed in the 1920s to explain the wave-particle duality observed
+            at atomic scales, and digital computers emerged in the following
+            decades to replace human computers for tedious calculations. Both
+            disciplines had practical applications during World War II;
+            computers played a major role in wartime cryptography, and quantum
+            physics was essential for the nuclear physics used in the Manhattan
+            Project.
+          </p>
+          <p>
+            As physicists applied quantum mechanical models to computational
+            problems and swapped digital bits for qubits, the fields of quantum
+            mechanics and computer science began to converge. In 1980, Paul
+            Benioff introduced the quantum Turing machine, which uses quantum
+            theory to describe a simplified computer. When digital computers
+            became faster, physicists faced an exponential increase in overhead
+            when simulating quantum dynamics, prompting Yuri Manin and Richard
+            Feynman to independently suggest that hardware based on quantum
+            phenomena might be more efficient for computer simulation. In a 1984
+            paper, Charles Bennett and Gilles Brassard applied quantum theory to
+            cryptography protocols and demonstrated that quantum key
+            distribution could enhance information security.
+          </p>
+          <p>
+            Quantum algorithms then emerged for solving oracle problems, such as
+            Deutsch's algorithm in 1985, the Bernstein-Vazirani algorithm in
+            1993, and Simon's algorithm in 1994. These algorithms did not solve
+            practical problems, but demonstrated mathematically that one could
+            gain more information by querying a black box in superposition,
+            sometimes referred to as quantum parallelism. Peter Shor built on
+            these results with his 1994 algorithms for breaking the widely-used
+            RSA and Diffie-Hellman encryption protocols, which drew significant
+            attention to the field of quantum computing. In 1996, Grover's
+            algorithm established a quantum speedup for the widely-applicable
+            unstructured search problem. The same year, Seth Lloyd proved that
+            quantum computers could simulate quantum systems without the
+            exponential overhead present in classical simulations, validating
+            Feynman's 1982 conjecture.
+          </p>
+          <p>
+            The threshold theorem shows how increasing the number of qubits can
+            mitigate errors, yet fully fault-tolerant quantum computing remains
+            “a rather distant dream”. According to some researchers, noisy
+            intermediate-scale quantum (NISQ) machines may have specialized uses
+            in the near future, but noise in quantum gates limits their
+            reliability. In recent years, investment in quantum computing
+            research has increased in the public and private sectors. As one
+            consulting firm summarized,
+          </p>
+          <blockquote>
+            <p>
+              ... investment dollars are pouring in, and quantum-computing
+              start-ups are proliferating. ... While quantum computing promises
+              to help businesses solve problems that are beyond the reach and
+              speed of conventional high-performance computers, use cases are
+              largely experimental and hypothetical at this early stage.
+            </p>
+          </blockquote>
+        </section>
+        <section id="algorithms">
+          <h2>Algorithms</h2>
+          <p>
+            Progress in finding quantum algorithms typically focuses on this
+            quantum circuit model, though exceptions like the quantum adiabatic
+            algorithm exist. Quantum algorithms can be roughly categorized by
+            the type of speedup achieved over corresponding classical
+            algorithms.
+          </p>
+          <p>
+            Quantum algorithms that offer more than a polynomial speedup over
+            the best-known classical algorithm include Shor's algorithm for
+            factoring and the related quantum algorithms for computing discrete
+            logarithms, solving Pell's equation, and more generally solving the
+            hidden subgroup problem for abelian finite groups. These algorithms
+            depend on the primitive of the quantum Fourier transform. No
+            mathematical proof has been found that shows that an equally fast
+            classical algorithm cannot be discovered, although this is
+            considered unlikely. Certain oracle problems like Simon's problem
+            and the Bernstein–Vazirani problem do give provable speedups, though
+            this is in the quantum query model, which is a restricted model
+            where lower bounds are much easier to prove and doesn't necessarily
+            translate to speedups for practical problems.
+          </p>
+          <p>
+            Other problems, including the simulation of quantum physical
+            processes from chemistry and solid-state physics, the approximation
+            of certain Jones polynomials, and the quantum algorithm for linear
+            systems of equations have quantum algorithms appearing to give
+            super-polynomial speedups and are BQP-complete. Because these
+            problems are BQP-complete, an equally fast classical algorithm for
+            them would imply that no quantum algorithm gives a super-polynomial
+            speedup, which is believed to be unlikely.
+          </p>
+          <p>
+            Some quantum algorithms, like Grover's algorithm and amplitude
+            amplification, give polynomial speedups over corresponding classical
+            algorithms. Though these algorithms give comparably modest quadratic
+            speedup, they are widely applicable and thus give speedups for a
+            wide range of problems. Many examples of provable quantum speedups
+            for query problems are related to Grover's algorithm, including
+            Brassard, Høyer, and Tapp's algorithm for finding collisions in
+            two-to-one functions, which uses Grover's algorithm, and Farhi,
+            Goldstone, and Gutmann's algorithm for evaluating NAND trees, which
+            is a variant of the search problem.
+          </p>
+        </section>
+        <section id="engineering">
+          <h2>Engineering</h2>
+          <section>
+            <h3>Challenges</h3>
+            <p>
+              There are a number of technical challenges in building a
+              large-scale quantum computer. Physicist David DiVincenzo has
+              listed these requirements for a practical quantum computer:
+            </p>
+            <ul>
+              <li>Physically scalable to increase the number of qubits</li>
+              <li>Qubits that can be initialized to arbitrary values</li>
+              <li>Quantum gates that are faster than decoherence time</li>
+              <li>Universal gate set</li>
+              <li>Qubits that can be read easily</li>
+            </ul>
+            <p>
+              Sourcing parts for quantum computers is also very difficult.
+              Superconducting quantum computers, like those constructed by
+              Google and IBM, need helium-3, a nuclear research byproduct, and
+              special superconducting cables made only by the Japanese company
+              Coax Co.
+            </p>
+            <p>
+              The control of multi-qubit systems requires the generation and
+              coordination of a large number of electrical signals with tight
+              and deterministic timing resolution. This has led to the
+              development of quantum controllers which enable interfacing with
+              the qubits. Scaling these systems to support a growing number of
+              qubits is an additional challenge.
+            </p>
+            <section>
+              <h4>Decoherence</h4>
+              <p>
+                One of the greatest challenges involved with constructing
+                quantum computers is controlling or removing quantum
+                decoherence. This usually means isolating the system from its
+                environment as interactions with the external world cause the
+                system to decohere. However, other sources of decoherence also
+                exist. Examples include the quantum gates, and the lattice
+                vibrations and background thermonuclear spin of the physical
+                system used to implement the qubits. Decoherence is
+                irreversible, as it is effectively non-unitary, and is usually
+                something that should be highly controlled, if not avoided.
+                Decoherence times for candidate systems in particular, the
+                transverse relaxation time T2 (for NMR and MRI technology, also
+                called the dephasing time), typically range between nanoseconds
+                and seconds at low temperature. Currently, some quantum
+                computers require their qubits to be cooled to 20 millikelvin
+                (usually using a dilution refrigerator) in order to prevent
+                significant decoherence. A 2020 study argues that ionizing
+                radiation such as cosmic rays can nevertheless cause certain
+                systems to decohere within milliseconds.
+              </p>
+            </section>
+          </section>
+          <section>
+            <h3>Quantum supremacy</h3>
+            <p>
+              Quantum supremacy is a term coined by John Preskill referring to
+              the engineering feat of demonstrating that a programmable quantum
+              device can solve a problem beyond the capabilities of
+              state-of-the-art classical computers. The problem need not be
+              useful, so some view the quantum supremacy test only as a
+              potential future benchmark.
+            </p>
+          </section>
+          <section>
+            <h3>Skepticism</h3>
+            <p>
+              Some researchers have expressed skepticism that scalable quantum
+              computers could ever be built, typically because of the issue of
+              maintaining coherence at large scales, but also for other reasons.
+            </p>
+          </section>
+        </section>
+        <section id="theory">
+          <h2>Theory</h2>
+          <section>
+            <h3>Computability</h3>
+            <p>
+              Any computational problem solvable by a classical computer is also
+              solvable by a quantum computer. Intuitively, this is because it is
+              believed that all physical phenomena, including the operation of
+              classical computers, can be described using quantum mechanics,
+              which underlies the operation of quantum computers.
+            </p>
+            <p>
+              Conversely, any problem solvable by a quantum computer is also
+              solvable by a classical computer. It is possible to simulate both
+              quantum and classical computers manually with just some paper and
+              a pen, if given enough time. More formally, any quantum computer
+              can be simulated by a Turing machine. In other words, quantum
+              computers provide no additional power over classical computers in
+              terms of computability. This means that quantum computers cannot
+              solve undecidable problems like the halting problem and the
+              existence of quantum computers does not disprove the Church-Turing
+              thesis.
+            </p>
+          </section>
+          <section>
+            <h3>Complexity</h3>
+            <p>
+              While quantum computers cannot solve any problems that classical
+              computers cannot already solve, it is suspected that they can
+              solve certain problems faster than classical computers. For
+              instance, it is known that quantum computers can efficiently
+              factor integers, while this is not believed to be the case for
+              classical computers.
+            </p>
+          </section>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2023 <a href="https://www.wikipedia.org">Wikipedia</a></p>
+    </footer>
+  </body>
+</html>

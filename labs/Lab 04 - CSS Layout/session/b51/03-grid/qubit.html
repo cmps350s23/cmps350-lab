@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qubit</title>
+    <link href="styles/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div id="navigation">
+        <nav id="site-navigation">
+          <ul>
+            <li>
+              <a href="quantum.html"
+                ><img
+                  class="inline-icon"
+                  src="icons/home.svg"
+                  alt="home icon"
+                />Quantum</a
+              >
+            </li>
+            <li class="current">
+              <a href="qubit.html"
+                ><img
+                  class="inline-icon"
+                  src="icons/code.svg"
+                  alt="code icon"
+                />Qubit</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav id="section-navigation">
+          <ul>
+            <li>
+              <a href="#etymology"
+                ><img
+                  class="inline-icon"
+                  src="icons/hash.svg"
+                  alt="section icon"
+                />Etymology</a
+              >
+            </li>
+            <li>
+              <a href="#bit-versus-qubit"
+                ><img
+                  class="inline-icon"
+                  src="icons/hash.svg"
+                  alt="section icon"
+                />Bit versus qubit</a
+              >
+            </li>
+            <li>
+              <a href="#quantum-register"
+                ><img
+                  class="inline-icon"
+                  src="icons/hash.svg"
+                  alt="section icon"
+                />Quantum register</a
+              >
+            </li>
+            <li>
+              <a href="#qubit-storage"
+                ><img
+                  class="inline-icon"
+                  src="icons/hash.svg"
+                  alt="section icon"
+                />Qubit storage</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h1>Qubit</h1>
+      <p>
+        In quantum computing, a <strong>qubit</strong> (/ˈkjuːbɪt/) or quantum
+        bit is a basic unit of quantum information—the quantum version of the
+        classic binary bit physically realized with a two-state device. A qubit
+        is a two-state (or two-level) quantum-mechanical system, one of the
+        simplest quantum systems displaying the peculiarity of quantum
+        mechanics. Examples include the spin of the electron in which the two
+        levels can be taken as spin up and spin down; or the polarization of a
+        single photon in which the two states can be taken to be the vertical
+        polarization and the horizontal polarization. In a classical system, a
+        bit would have to be in one state or the other. However, quantum
+        mechanics allows the qubit to be in a coherent superposition of both
+        states simultaneously, a property that is fundamental to quantum
+        mechanics and quantum computing.
+      </p>
+      <section id="etymology">
+        <h2>Etymology</h2>
+        <p>
+          The coining of the term qubit is attributed to Benjamin Schumacher. In
+          the acknowledgments of his 1995 paper, Schumacher states that the term
+          qubit was created in jest during a conversation with William Wootters.
+        </p>
+      </section>
+      <section id="bit-versus-qubit">
+        <h2>Bit versus qubit</h2>
+        <p>
+          A binary digit, characterized as 0 or 1, is used to represent
+          information in classical computers. When averaged over both of its
+          states (0, 1), a binary digit can represent up to one bit of Shannon
+          information, where a bit is the basic unit of information. However, in
+          this article, the word bit is synonymous with a binary digit.
+        </p>
+        <p>
+          In classical computer technologies, a processed bit is implemented by
+          one of two levels of low DC voltage, and whilst switching from one of
+          these two levels to the other, a so-called “forbidden zone” between
+          two logic levels must be passed as fast as possible, as electrical
+          voltage cannot change from one level to another instantaneously.
+        </p>
+        <p>
+          There are two possible outcomes for the measurement of a qubit—usually
+          taken to have the value “0” and “1”, like a bit or binary digit.
+          However, whereas the state of a bit can only be either 0 or 1, the
+          general state of a qubit according to quantum mechanics can be a
+          coherent superposition of both. Moreover, whereas a measurement of a
+          classical bit would not disturb its state, a measurement of a qubit
+          would destroy its coherence and irrevocably disturb the superposition
+          state. It is possible to fully encode one bit in one qubit. However, a
+          qubit can hold more information, e.g., up to two bits using superdense
+          coding.
+        </p>
+        <p>
+          For a system of n components, a complete description of its state in
+          classical physics requires only n bits, whereas in quantum physics it
+          requires 2n complex numbers (or a single point in a 2n-dimensional
+          vector space).
+        </p>
+      </section>
+      <section id="quantum-register">
+        <h2>Quantum register</h2>
+        <p>
+          A number of qubits taken together is a qubit register. Quantum
+          computers perform calculations by manipulating qubits within a
+          register.
+        </p>
+        <section>
+          <h3>Qudits and qutrits</h3>
+          <p>
+            The term qudit denotes the unit of quantum information that can be
+            realized in suitable d-level quantum systems. A qubit register that
+            can be measured to N states is identical to an N-level qudit. A
+            rarely used synonym for qudit is quNit, since both d and N are
+            frequently used to denote the dimension of a quantum system.
+          </p>
+          <p>
+            Qudits are similar to the integer types in classical computing, and
+            may be mapped to (or realized by) arrays of qubits. Qudits where the
+            d-level system is not an exponent of 2 can not be mapped to arrays
+            of qubits. It is for example possible to have 5-level qudits.
+          </p>
+        </section>
+      </section>
+      <section id="qubit-storage">
+        <h2>Qubit storage</h2>
+        <p>
+          In 2008 a team of scientists from the U.K. and U.S. reported the first
+          relatively long (1.75 seconds) and coherent transfer of a
+          superposition state in an electron spin “processing” qubit to a
+          nuclear spin “memory” qubit. This event can be considered the first
+          relatively consistent quantum data storage, a vital step towards the
+          development of quantum computing. In 2013, a modification of similar
+          systems (using charged rather than neutral donors) has dramatically
+          extended this time, to 3 hours at very low temperatures and 39 minutes
+          at room temperature. Room temperature preparation of a qubit based on
+          electron spins instead of nuclear spin was also demonstrated by a team
+          of scientists from Switzerland and Australia. An increased coherence
+          of qubits is being explored by researchers who are testing the
+          limitations of a Ge hole spin-orbit qubit structure.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2023
+        <a href="https://www.wikipedia.org">Wikipedia</a>
+      </p>
+    </footer>
+  </body>
+</html>
