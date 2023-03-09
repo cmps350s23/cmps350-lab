@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "main": "unit-converter.js",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
+}
