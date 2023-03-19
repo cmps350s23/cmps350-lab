@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", "Noto Naskh Arabic", sans-serif;
+  color: #fff;
+  background-color: #333;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#selection {
+  display: grid;
+  grid-template-columns: 75px auto;
+  gap: 10px;
+}
+
+#country-flag {
+  margin-bottom: 15px;
+}
+
+#country-flag img {
+  max-width: 560px;
+}
+
+main table td {
+  padding: 2px 0;
+}
+
+main table th {
+  text-align: start;
+  padding-inline-end: 10px;
+  min-width: 120px;
+}
+
+main table th,
+main table td {
+  vertical-align: baseline;
+}
+
+h1 {
+  margin-bottom: 15px;
+}
+h2 {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
