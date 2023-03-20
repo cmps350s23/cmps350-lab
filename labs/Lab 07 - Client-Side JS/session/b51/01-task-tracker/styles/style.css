@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Naskh+Arabic:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", "Noto Naskh Arabic", sans-serif;
+  color: #111;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  /* border-bottom: solid 1px #111;
+  border-top: solid 1px #111; */
+  margin-bottom: 20px;
+}
+
+button {
+  margin: 0;
+  border-radius: 10px;
+  border: none;
+  padding: 7px 10px 5px 9px;
+  cursor: pointer;
+}
+
+#task-creation {
+  display: grid;
+  grid-template-columns: auto 42px;
+  gap: 10px;
+}
+
+#tasks {
+  margin-top: 20px;
+}
+
+#new-task-title {
+  font-size: large;
+  padding: 0 5px;
+}
+
+.task {
+  border: solid 1px gray;
+  display: grid;
+  grid-template-columns: auto 42px 42px;
+  gap: 10px;
+  padding: 10px 5px;
+}
+
+.task.complete .task-title {
+  text-decoration: line-through;
+}
+
+.task-title {
+  font-size: large;
+  margin: auto 0;
+}
+
+#task-reset {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: row-reverse;
+}
+
+.task:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.task:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.task:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+#task-reset.hidden {
+  display: none;
+}
