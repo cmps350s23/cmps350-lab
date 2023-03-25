@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const data = await res.blob();
 
     const photo = document.createElement("img");
+    // photo.src = "https://picsum.photos/360"; // does not work. results in the same cached photo
     photo.src = URL.createObjectURL(data);
     photo.addEventListener("click", () => {
       document.querySelector("#gallery").removeChild(photo);

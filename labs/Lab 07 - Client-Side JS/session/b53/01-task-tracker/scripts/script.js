@@ -2,12 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   let tasks = [];
 
   const renderTasks = () => {
-    const tasksDiv = document.querySelector("#tasks");
-    tasksDiv.innerHTML = null;
+    document.querySelector("#tasks").innerHTML = null;
+
+    if (tasks.length) {
+      document.querySelector("#task-reset").classList.remove("hidden");
+    } else {
+      document.querySelector("#task-reset").classList.add("hidden");
+    }
 
     tasks.forEach((task) => {
       const taskDiv = document.createElement("div");
       taskDiv.classList.add("task");
+      if (task.complete) {
+        taskDiv.classList.add("complete");
+      }
 
       const titleDiv = document.createElement("div");
       titleDiv.classList.add("task-title");
@@ -16,31 +24,25 @@ document.addEventListener("DOMContentLoaded", () => {
       const completeCheck = document.createElement("input");
       completeCheck.type = "checkbox";
       completeCheck.checked = task.complete;
-      if (task.complete) {
-        taskDiv.classList.add("complete");
-      }
+
       completeCheck.addEventListener("click", () => completeTask(task.title));
 
       const deleteButton = document.createElement("button");
-      const deleteImage = document.createElement("img");
-      deleteImage.src = "images/x-circle.svg";
-      deleteImage.alt = "delete task";
-      deleteButton.appendChild(deleteImage);
+
       deleteButton.addEventListener("click", () => deleteTask(task.title));
+
+      const deleteImg = document.createElement("img");
+      deleteImg.src = "images/x-circle.svg";
+      deleteImg.alt = "delete task";
+
+      deleteButton.appendChild(deleteImg);
 
       taskDiv.appendChild(titleDiv);
       taskDiv.appendChild(completeCheck);
       taskDiv.appendChild(deleteButton);
 
-      tasksDiv.appendChild(taskDiv);
+      document.querySelector("#tasks").appendChild(taskDiv);
     });
-
-    if (tasks.length > 1) {
-      // show only when there are more than one task
-      document.querySelector("#task-reset").classList.remove("hidden");
-    } else {
-      document.querySelector("#task-reset").classList.add("hidden");
-    }
   };
 
   const addTask = () => {
@@ -51,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
         title,
         complete: false,
       });
+
       document.querySelector("#new-task-title").value = "";
     }
 
@@ -66,13 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const deleteTask = (title) => {
     const index = tasks.findIndex((task) => task.title === title);
+    // if (tasks[index].complete) {
     tasks.splice(index, 1);
 
     renderTasks();
+    // }
   };
 
   const clearTasks = () => {
     tasks = [];
+
     renderTasks();
   };
 

@@ -6,8 +6,18 @@
   box-sizing: border-box;
 }
 
-header {
-  text-align: center;
+#gallery {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+#gallery img {
+  border-radius: 10%;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
 }
 
 button {
@@ -18,19 +28,6 @@ button {
   cursor: pointer;
 }
 
-#add-photo {
-  margin-bottom: 20px;
-}
-
-#gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 15px;
-  margin: 0 20px;
-}
-
-#gallery img {
-  border-radius: 10px;
-  cursor: pointer;
-  width: 100%;
+header {
+  text-align: center;
 }

@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-header {
-  text-align: center;
-}
-
 button {
   margin: 0;
   border-radius: 10px;
@@ -18,7 +14,8 @@ button {
   cursor: pointer;
 }
 
-#add-photo {
+header {
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -26,11 +23,12 @@ button {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 15px;
-  margin: 0 20px;
+  margin: 20px;
 }
 
-#gallery img {
-  border-radius: 10px;
-  cursor: pointer;
+img {
   width: 100%;
+  /* height: 100%; */
+  cursor: pointer;
+  border-radius: 15px;
 }

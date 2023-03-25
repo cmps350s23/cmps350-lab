@@ -1,43 +1,47 @@
 document.addEventListener("DOMContentLoaded", async () => {
+  // fetch the data
   const res = await fetch("https://restcountries.com/v3.1/all");
-  const data = await res.json();
+  let data;
+  // if (res.ok) {
+  data = await res.json();
+  // }
+  // console.log(data);
+
+  const regionsSelect = document.querySelector("#regions");
+  const subregionsSelect = document.querySelector("#subregions");
+  const countriesSelect = document.querySelector("#countries");
 
   const hierarchy = {};
   data.forEach((fact) => {
     if (!(fact.region in hierarchy)) {
       hierarchy[fact.region] = {};
     }
-
     if (!fact.subregion) {
-      fact.subregion = "N/A";
+      fact.subregion = "—";
     }
     if (!(fact.subregion in hierarchy[fact.region])) {
       hierarchy[fact.region][fact.subregion] = {};
     }
-
     hierarchy[fact.region][fact.subregion][fact.name.common] = fact;
   });
+  // console.log(hierarchy);
 
   const updateRegions = () => {
-    document.querySelector("#regions").innerHTML = Object.keys(hierarchy)
+    regionsSelect.innerHTML = Object.keys(hierarchy)
       .sort()
       .map((region) => `<option value="${region}">${region}</option>`)
       .join("");
   };
 
   const updateSubregions = (region) => {
-    document.querySelector("#subregions").innerHTML = Object.keys(
-      hierarchy[region]
-    )
+    subregionsSelect.innerHTML = Object.keys(hierarchy[region])
       .sort()
       .map((subregion) => `<option value="${subregion}">${subregion}</option>`)
       .join("");
   };
 
   const updateCountries = (region, subregion) => {
-    document.querySelector("#countries").innerHTML = Object.keys(
-      hierarchy[region][subregion]
-    )
+    countriesSelect.innerHTML = Object.keys(hierarchy[region][subregion])
       .sort()
       .map((country) => `<option value="${country}">${country}</option>`)
       .join("");
@@ -68,11 +72,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         </tr>
         <tr>
           <th scope="row">Languages</th>
-          <td>${Object.values(fact.languages).join(", ")}</td>
+          <td>${
+            "langauges" in fact ? Object.values(fact.languages).join(", ") : "—"
+          }</td>
         </tr>
         <tr>
           <th scope="row">Currencies</th>
-          <td>${Object.keys(fact.currencies).join(", ")}</td>
+          <td>${
+            "currencies" in fact ? Object.keys(fact.currencies).join(", ") : "—"
+          }</td>
         </tr>
         <tr>
           <th scope="row">TLD</th>
@@ -82,48 +90,52 @@ document.addEventListener("DOMContentLoaded", async () => {
     </table>`;
   };
 
-  document.querySelector("#regions").addEventListener("change", () => {
-    updateSubregions(document.querySelector("#regions").value);
-    updateCountries(
-      document.querySelector("#regions").value,
-      document.querySelector("#subregions").value
-    );
+  regionsSelect.addEventListener("change", () => {
+    updateSubregions(regionsSelect.value);
+    updateCountries(regionsSelect.value, subregionsSelect.value);
     updateFacts(
-      document.querySelector("#regions").value,
-      document.querySelector("#subregions").value,
-      document.querySelector("#countries").value
+      regionsSelect.value,
+      subregionsSelect.value,
+      countriesSelect.value
     );
   });
-
-  document.querySelector("#subregions").addEventListener("change", () => {
-    updateCountries(
-      document.querySelector("#regions").value,
-      document.querySelector("#subregions").value
-    );
+  subregionsSelect.addEventListener("change", () => {
+    updateCountries(regionsSelect.value, subregionsSelect.value);
     updateFacts(
-      document.querySelector("#regions").value,
-      document.querySelector("#subregions").value,
-      document.querySelector("#countries").value
+      regionsSelect.value,
+      subregionsSelect.value,
+      countriesSelect.value
     );
   });
-
-  document.querySelector("#countries").addEventListener("change", () => {
+  countriesSelect.addEventListener("change", () => {
     updateFacts(
-      document.querySelector("#regions").value,
-      document.querySelector("#subregions").value,
-      document.querySelector("#countries").value
+      regionsSelect.value,
+      subregionsSelect.value,
+      countriesSelect.value
     );
   });
 
   updateRegions();
   updateSubregions(document.querySelector("#regions").value);
-  updateCountries(
-    document.querySelector("#regions").value,
-    document.querySelector("#subregions").value
-  );
+  updateCountries(regionsSelect.value, subregionsSelect.value);
   updateFacts(
-    document.querySelector("#regions").value,
-    document.querySelector("#subregions").value,
-    document.querySelector("#countries").value
+    regionsSelect.value,
+    subregionsSelect.value,
+    countriesSelect.value
   );
 });
+
+// const hierarchy = {
+//   Africa: {
+//     "Eastern Africa": {
+//       "British Indian Ocean Territory": {
+//         name: {
+//           common: {
+
+//           }
+//         }
+//       },
+//     },
+//   },
+//   Americas: {},
+// };
