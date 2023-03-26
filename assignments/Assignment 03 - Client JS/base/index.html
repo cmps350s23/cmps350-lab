@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="icon" href="images/favicon.jpg" />
+    <title>Recipe App</title>
+  </head>
+
+  <body>
+    <header class="banner">
+      <h1 class="title">Recipe Management App</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="#" onclick="loadPage('edit-page.html')">Add Recipe</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-content" class="main-content">
+      <!--For a new page replace the whole thing inside the main-content -->
+      <div class="recipes" id="recipes">
+        <!-- Load the recipes here you need to remove the sample card below -->
+        <div class="recipe-card">
+          <img
+            src="https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg"
+            class="card-img"
+          />
+          <div class="description">
+            <h1>REMOVE ME I AM EXAMPLE</h1>
+            <hr />
+            <h2>MOVE ME TO THE JAVASCRIPT FILE</h2>
+            <p class="instructions">
+              REMOVE ME AS I NEED TO BE INJECTED FROM JAVASCRIPT DYNAMICALLY
+            </p>
+          </div>
+          <div class="action-btns">
+            <button class="btn-update">
+              <i class="fa fa-pencil">Update</i>
+            </button>
+            <button class="btn-delete">
+              <i class="fa fa-trash"> Delete </i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
+
+<!-- also if you put all your cards under a div called recipes then it will create the grid -->
+<!-- you can use this as a template for your cards -->
+<!-- <div class="recipe-card">
+  <img
+    src="https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg"
+    class="card-img"
+  />
+  <div class="description">
+    <h1>Pasta Dish</h1>
+    <hr />
+    <h2>Instructions</h2>
+    <p class="instructions">
+      Grease a 1 litre/2 pint pie dish with butter.\r\nCut the crusts off the
+      bread.
+    </p>
+  </div>
+  <div class="action-btns">
+    <button class="btn-update"><i class="fa fa-pencil">Update</i></button>
+    <button class="btn-delete"><i class="fa fa-trash"> Delete </i></button>
+  </div>
+</div> -->
