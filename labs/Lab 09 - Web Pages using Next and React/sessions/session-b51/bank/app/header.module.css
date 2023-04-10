@@ -1,0 +1,10 @@
+.header {
+  display: grid;
+  place-items: center;
+}
+
+.header nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}

@@ -1,3 +1,3 @@
 export default function Transactions() {
-  return <p>Welcome to web3.0!</p>;
+  return <h2>Transactions</h2>;
 }

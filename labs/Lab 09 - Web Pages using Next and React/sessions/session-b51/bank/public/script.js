@@ -1,25 +1,29 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  const apiPath = "/api/";
-  const res = await fetch(apiPath + "accounts");
-  const accounts = await res.json();
+  document
+    .querySelector("#type")
+    .addEventListener("change", (e) => alert(e.target.value));
 
-  document.querySelector("#new-transaction").addEventListener("submit", (e) => {
-    e.preventDefault();
+  // const apiPath = "/api/";
+  // const res = await fetch(apiPath + "accounts");
+  // const accounts = await res.json();
 
-    // capture values using FormData
+  // document.querySelector("#new-transaction").addEventListener("submit", (e) => {
+  //   e.preventDefault();
 
-    // create transaction object
-    const res = fetch(`/api/accounts/${accountid}/transactions`, {
-      method: "POST",
-      body: {
-        accountid: 123,
-        type: "w",
-        amount: 10,
-      },
-    });
-  });
+  //   // capture values using FormData
 
-  document.querySelector("#account-id").innerHTML = accounts
-    .map((account) => `<option value=${account.id}">${account.id}</option>`)
-    .join("");
+  //   // create transaction object
+  //   const res = fetch(`/api/accounts/${accountid}/transactions`, {
+  //     method: "POST",
+  //     body: {
+  //       accountid: 123,
+  //       type: "w",
+  //       amount: 10,
+  //     },
+  //   });
+  // });
+
+  // document.querySelector("#account-id").innerHTML = accounts
+  //   .map((account) => `<option value=${account.id}">${account.id}</option>`)
+  //   .join("");
 });
