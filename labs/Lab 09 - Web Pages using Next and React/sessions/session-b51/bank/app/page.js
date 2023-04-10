@@ -2,7 +2,16 @@ import styles from "./page.module.css";
 import Link from "next/link";
 
 export default async function Home({ searchParams }) {
-  let { type } = searchParams;
+  let { type, action, id } = searchParams;
+  console.log(action);
+
+  if (action === "delete") {
+    const res = await fetch(`http://localhost:3001/api/accounts/${id}`, {
+      method: "DELETE",
+    });
+    const data = await res.json();
+  }
+
   // console.log(type);
 
   const res = await fetch(
@@ -13,20 +22,20 @@ export default async function Home({ searchParams }) {
   return (
     <>
       <h2>Accounts</h2>
-      {/* <select id="type">
+      <select id="type">
         <option value="">All</option>
         <option value="current">Current</option>
         <option value="savings">Savings</option>
-      </select> */}
+      </select>
       <ul>
         <li>
-          <Link href="/">All</Link>
+          <Link href="">All</Link>
         </li>
         <li>
-          <Link href="/?type=current">Current</Link>
+          <Link href="?type=current">Current</Link>
         </li>
         <li>
-          <Link href="/?type=savings">Savings</Link>
+          <Link href="?type=savings">Savings</Link>
         </li>
       </ul>
       <table>
@@ -45,7 +54,7 @@ export default async function Home({ searchParams }) {
               <td>{account.type.toUpperCase()}</td>
               <td>${account.balance.toLocaleString()}</td>
               <td>
-                <Link href="">Delete</Link>
+                <Link href={`?action=delete&id=${account.id}`}>Delete</Link>
               </td>
             </tr>
           ))}
