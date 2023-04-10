@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  padding: 5rem;
+}
+
 header {
   display: grid;
   place-items: center;
@@ -13,4 +17,9 @@ header ul {
   display: flex;
   gap: 1rem;
   list-style: none;
+  margin-top: 0.5rem;
+}
+
+header ul li a {
+  text-decoration: none;
 }

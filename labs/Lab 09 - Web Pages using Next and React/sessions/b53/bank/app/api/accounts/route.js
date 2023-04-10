@@ -1,6 +1,8 @@
-import * as repo from "./repository.js";
+import * as repo from "../../../utilities/repository.js";
 
 export async function GET(request) {
+  // console.log('I"M BEING GET!');
+
   try {
     const { searchParams } = new URL(request.url);
     const type = searchParams.get("type")?.toLowerCase();

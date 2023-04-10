@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <header>
@@ -5,16 +7,16 @@ export default function Header() {
       <nav>
         <ul>
           <li>
-            <a href="/">Accounts</a>
+            <Link href="/">Accounts</Link>
           </li>
           <li>
-            <a href="/transactions">Transactions</a>
+            <Link href="/transactions">Transactions</Link>
           </li>
           <li>
-            <a href="/new">New Account</a>
+            <Link href="/new">New Account</Link>
           </li>
           <li>
-            <a href="/transactions/new">New Transaction</a>
+            <Link href="/transactions/new">New Transaction</Link>
           </li>
         </ul>
       </nav>

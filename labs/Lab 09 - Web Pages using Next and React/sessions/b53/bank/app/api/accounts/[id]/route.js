@@ -1,4 +1,4 @@
-import * as repo from "../repository.js";
+import * as repo from "../../../../utilities/repository.js";
 
 export async function GET(request, { params }) {
   try {
