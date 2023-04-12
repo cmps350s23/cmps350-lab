@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+button {
+  margin: 0;
+  border: unset;
+  background-color: unset;
+  padding: 5px;
+  cursor: pointer;
+}
+
+#add-photo {
+  margin-bottom: 15px;
+}
+
+#gallery {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
+img {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 15px;
+}
