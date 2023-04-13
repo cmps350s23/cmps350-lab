@@ -53,9 +53,10 @@ export async function deleteAccount(id) {
   let accounts = JSON.parse(data);
 
   const index = accounts.findIndex((account) => account.id === id);
-  if (index) {
+  if (index !== -1) {
     const account = accounts[index];
     accounts.splice(index, 1);
+    await fs.writeFile(path, JSON.stringify(accounts));
     return account;
   }
 
