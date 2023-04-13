@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Transaction</title>
+    <script src="new-transaction.js"></script>
+  </head>
+  <body>
+    <main>
+      <form id="create-transaction" method="POST" action="">
+        <label for="account">Account</label>
+        <select name="account" id="account"></select>
+        <label for="type">Type</label>
+        <select name="type" id="type">
+          <option value="d">Deposit</option>
+          <option value="w">Withdrawal</option>
+        </select>
+        <label for="amount">Amount</label>
+        <input name="amount" type="number" min="0" value="0" required />
+        <input type="submit" />
+      </form>
+    </main>
+  </body>
+</html>
