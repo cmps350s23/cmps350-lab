@@ -1,0 +1,172 @@
+{
+  "info": {
+    "_postman_id": "b62f5da1-333c-431d-9de7-536ffc37f060",
+    "name": "CMPS 350 - Lab 10 - Photos Albums",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "8340285"
+  },
+  "item": [
+    {
+      "name": "/api/albums",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/albums",
+          "host": ["{{base_url}}"],
+          "path": ["api", "albums"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/albums",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"Album 6\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/albums",
+          "host": ["{{base_url}}"],
+          "path": ["api", "albums"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/albums/:album",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/albums/:album",
+          "host": ["{{base_url}}"],
+          "path": ["api", "albums", ":album"],
+          "variable": [
+            {
+              "key": "album",
+              "value": "iFVmZvT8R5yH5JtGwNYd_"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/albums/:album",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"photo\": \"/api/photos/KLb-wvqprTVBexHL7G5rb\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/albums/:album",
+          "host": ["{{base_url}}"],
+          "path": ["api", "albums", ":album"],
+          "variable": [
+            {
+              "key": "album",
+              "value": "iFVmZvT8R5yH5JtGwNYd_"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/albums/:album",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/albums/:album",
+          "host": ["{{base_url}}"],
+          "path": ["api", "albums", ":album"],
+          "variable": [
+            {
+              "key": "album",
+              "value": "iFVmZvT8R5yH5JtGwNYd_"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/photos",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "file",
+          "file": {
+            "src": "/Users/jorj/Desktop/02-photo-albums/data/originals/pexels-pedro-figueras-626158.jpg"
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/api/photos",
+          "host": ["{{base_url}}"],
+          "path": ["api", "photos"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/api/photos/:photo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/photos/:photo",
+          "host": ["{{base_url}}"],
+          "path": ["api", "photos", ":photo"],
+          "variable": [
+            {
+              "key": "photo",
+              "value": "KLb-wvqprTVBexHL7G5rb"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [""]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000/",
+      "type": "string"
+    }
+  ]
+}
