@@ -1,0 +1,152 @@
+.todoForm {
+  background: #dfe8ec;
+  width: 400px;
+  margin: auto;
+  position: relative;
+  height: fit-content;
+  padding: 10px;
+}
+
+.deleted {
+  background-color: darkgreen;
+}
+
+.deleteBtn {
+  display: block;
+  text-align: right;
+  margin: 20px;
+}
+
+.title {
+  background-color: darkgreen;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  color: white;
+  padding: 10px;
+}
+
+.icon {
+  color: #ff0000;
+  transform: scale(2);
+  margin: 10px;
+}
+
+.submitBtn {
+  border-style: none;
+  background-color: blue;
+  color: white;
+  border-radius: 5%;
+  font-weight: 600;
+  padding: 10px;
+  margin: 1rem;
+}
+
+.faPlus {
+  color: white;
+  background-color: #6475ee;
+  padding: 2px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 10px;
+  background-color: white;
+
+}
+
+.todoForm input {
+  height: 40px;
+  border-radius: 2%;
+  border: 1px solid white;
+  padding-left: 5px;
+  margin: 0.2rem;
+}
+
+.todoTitle {
+  flex: 1;
+  padding-left: 10px;
+  font-size: 1rem;
+}
+
+.todo {
+  margin: 1px 10px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.small {
+  font-size: 0.5rem;
+}
+
+/* navigation css */
+
+.nav {
+  background-color: #333;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin: 0 10px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px 10px;
+}
+
+.nav a:hover {
+  background-color: white;
+  color: #333;
+  border-radius: 5px;
+}
+
+/* table css */
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table thead th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

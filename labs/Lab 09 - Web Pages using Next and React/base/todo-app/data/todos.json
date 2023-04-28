@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Do something nice for someone I care about",
+    "completed": true,
+    "userId": 26
+  },
+  {
+    "id": 2,
+    "title": "Volunteer at a local charity or non-profit organization",
+    "completed": false,
+    "userId": 26
+  },
+  {
+    "id": 3,
+    "title": "Learn a new skill or take a course in a subject of interest",
+    "completed": false,
+    "userId": 26
+  },
+  {
+    "id": 4,
+    "title": "Start a gratitude journal and write down three things I'm grateful for every day",
+    "completed": false,
+    "userId": 26
+  },
+  {
+    "id": 5,
+    "title": "Spend more quality time with family and friends",
+    "completed": false,
+    "userId": 26
+  },
+  {
+    "id": 6,
+    "title": "Reduce carbon footprint by using eco-friendly products and adopting sustainable practices",
+    "completed": false,
+    "userId": 26
+  },
+  {
+    "id": 1680961371344,
+    "title": "123"
+  }
+]
