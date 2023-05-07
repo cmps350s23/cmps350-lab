@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+button:hover img {
+  filter: invert(32%) sepia(63%) saturate(1183%) hue-rotate(327deg)
+    brightness(88%) contrast(93%);
+}
+
+button[disabled] {
+  cursor: not-allowed;
+}
+
+button[disabled] img {
+  filter: invert(90%);
+}
