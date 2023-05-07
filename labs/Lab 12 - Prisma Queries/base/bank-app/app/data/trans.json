@@ -1,0 +1,79 @@
+[
+    {
+        "transId": 1,
+        "transType": "deposit",
+        "amount": 1000.0,
+        "date": "2021-08-16T10:00:00.000Z",
+        "accountNo": "rsfrg2fprksfrg2fpt"
+    },
+    {
+        "transId": 2,
+        "transType": "Withdraw",
+        "amount": 500.0,
+        "date": "2021-08-17T10:00:00.000Z",
+        "accountNo": "rsfrg2fprksfrg2fpt"
+    },
+    {
+        "transId": 3,
+        "transType": "deposit",
+        "amount": 100.0,
+        "date": "2021-09-01T10:00:00.000Z",
+        "accountNo": "asw2rtyuio9"
+    },
+    {
+        "transId": 4,
+        "transType": "Withdraw",
+        "amount": 50.0,
+        "date": "2021-09-02T10:00:00.000Z",
+        "accountNo": "asw2rtyuio9"
+    },
+    {
+        "transId": 5,
+        "transType": "deposit",
+        "amount": 2000.0,
+        "date": "2021-08-30T10:00:00.000Z",
+        "accountNo": "zxcvbnmlkpj"
+    },
+    {
+        "transId": 6,
+        "transType": "Withdraw",
+        "amount": 500.0,
+        "date": "2021-08-31T10:00:00.000Z",
+        "accountNo": "zxcvbnmlkpj"
+    },
+    {
+        "transId": 7,
+        "transType": "deposit",
+        "amount": 10000.0,
+        "date": "2021-09-01T10:00:00.000Z",
+        "accountNo": "poiuytrewq1"
+    },
+    {
+        "transId": 8,
+        "transType": "deposit",
+        "amount": 500.0,
+        "date": "2021-09-01T10:00:00.000Z",
+        "accountNo": "asw2rtyuio0"
+    },
+    {
+        "transId": 9,
+        "transType": "Withdraw",
+        "amount": 100.0,
+        "date": "2021-09-02T10:00:00.000Z",
+        "accountNo": "asw2rtyuio0"
+    },
+    {
+        "transId": 10,
+        "transType": "Withdraw",
+        "amount": 1000.0,
+        "date": "2021-09-16T10:00:00.000Z",
+        "accountNo": "tyufrg2fptksfrg2fpt"
+    },
+    {
+        "transId": 11,
+        "transType": "Withdraw",
+        "amount": 500.0,
+        "date": "2021-10-17T10:00:00.000Z",
+        "accountNo": "tyufrg2fptksfrg2fpt"
+    }
+]

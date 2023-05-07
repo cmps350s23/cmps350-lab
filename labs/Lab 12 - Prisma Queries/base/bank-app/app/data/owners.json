@@ -1,0 +1,20 @@
+[
+    {
+        "id": "ckockkdifg2fpt",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "johndoe@gmail.com"
+    },
+    {
+        "id": "dfghfrjki756gh",
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "email": "alicesmith@gmail.com"
+    },
+    {
+        "id": "uijklopt543ght",
+        "firstName": "Bob",
+        "lastName": "Johnson",
+        "email": "bobjohnson@gmail.com"
+    }
+]

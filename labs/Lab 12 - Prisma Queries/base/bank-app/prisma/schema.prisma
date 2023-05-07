@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Owner {
+  id        String    @id @default(cuid())
+  firstName String
+  lastName  String
+  email     String    @unique
+  accounts  Account[]
+}
+
+model Account {
+  accountNo    String        @id @default(cuid())
+  acctType     String
+  balance      Float
+  transactions Transaction[]
+  Owner        Owner         @relation(fields: [ownerId], references: [id])
+  ownerId      String
+}
+
+model Transaction {
+  transId   Int      @id @default(autoincrement())
+  transType String
+  amount    Float
+  date      DateTime @default(now())
+
+  Account   Account @relation(fields: [accountNo], references: [accountNo], onUpdate: Cascade, onDelete: Cascade)
+  accountNo String
+}
+
+// enum is not supported
+// create many is not supported

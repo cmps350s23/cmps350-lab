@@ -1,0 +1,33 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table Owner {
+  id String [pk]
+  firstName String [not null]
+  lastName String [not null]
+  email String [unique, not null]
+  accounts Account [not null]
+}
+
+Table Account {
+  accountNo String [pk]
+  acctType String [not null]
+  balance Float [not null]
+  transactions Transaction [not null]
+  Owner Owner [not null]
+  ownerId String [not null]
+}
+
+Table Transaction {
+  transId Int [pk, increment]
+  transType String [not null]
+  amount Float [not null]
+  date DateTime [default: `now()`, not null]
+  Account Account [not null]
+  accountNo String [not null]
+}
+
+Ref: Account.ownerId > Owner.id
+
+Ref: Transaction.accountNo > Account.accountNo [delete: Cascade]
