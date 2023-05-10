@@ -1,0 +1,194 @@
+/* CSS for the recipe application */
+/* Global styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* Style for banner image */
+.banner {
+  background-image: url("../img/banner-img.jpg");
+  height: 30vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  align-content: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* Navigation Style */
+nav {
+
+  background-color: tomato;
+}
+
+nav ul {
+  list-style-type: none;
+  overflow: hidden;
+  display: flex;
+  margin-left: 3rem;
+}
+
+nav li a {
+  display: block;
+  color: #f9f9f9;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* hide text overflow and show ellipses */
+
+
+nav li a:hover:not(.active) {
+  background-color: #e55252;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+/* main-content */
+.main-content {
+  margin: 2rem;
+}
+
+/* Recipe List Style */
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  justify-items: center;
+  align-items: start;
+}
+
+.recipe-card {
+  max-width: 420px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  /* added for better desgin*/
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.instructions {
+  display: none;
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 17px;
+  font-size: .7em;
+  margin-right: 25px;
+  text-align: justify;
+  height: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  /* add animation when display changes from none to block */
+
+}
+
+.action-btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-right: 25px;
+
+}
+
+.action-btns button {
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn-update {
+  background-color: #f0ad4e;
+  color: #fff;
+}
+
+.btn-delete {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+/* for the detail button */
+.btn-detail {
+  background-color: #5bc0de;
+  color: #fff;
+}
+
+/* Styles for the form */
+.title {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  padding: 20px;
+}
+
+input[type=text],
+input[type=url],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+select {
+  -webkit-appearance: none;
+  width: 50%;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: bold;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}

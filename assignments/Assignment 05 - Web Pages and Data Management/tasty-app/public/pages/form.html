@@ -1,0 +1,27 @@
+<form id="recipe-form" action="#">
+    <div>
+        <input type="text" name="id" hidden>
+    </div>
+    <div class="form-group">
+        <label for="name">Recipe Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="image">Image URL:</label>
+        <input type="url" id="image" name="image" required>
+    </div>
+    <div>
+        <label for="region">Region</label>
+        <input type="text" id="region" name="region" required>
+    </div>
+    <div>
+        <label for="ingredients">Ingredients:</label>
+        <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+    </div>
+
+    <div>
+        <label for="instructions">Cooking Instructions:</label>
+        <textarea id="instructions" name="instructions" rows="8" required></textarea>
+    </div>
+    <input type="submit" id="submit-recipe-btn" value="Add Recipe">
+</form>
