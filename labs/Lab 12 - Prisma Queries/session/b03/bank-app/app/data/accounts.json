@@ -1,0 +1,38 @@
+[
+    {
+        "accountNo": "rsfrg2fprksfrg2fpt",
+        "acctType": "Savings",
+        "balance": 5000.0,
+        "ownerId": "ckockkdifg2fpt"
+    },
+    {
+        "accountNo": "tyufrg2fptksfrg2fpt",
+        "acctType": "Current",
+        "balance": 3500.0,
+        "ownerId": "ckockkdifg2fpt"
+    },
+    {
+        "accountNo": "asw2rtyuio9",
+        "acctType": "Current",
+        "balance": 100.0,
+        "ownerId": "dfghfrjki756gh"
+    },
+    {
+        "accountNo": "asw2rtyuio0",
+        "acctType": "Savings",
+        "balance": 500.0,
+        "ownerId": "dfghfrjki756gh"
+    },
+    {
+        "accountNo": "zxcvbnmlkpj",
+        "acctType": "Current",
+        "balance": 2500.0,
+        "ownerId": "uijklopt543ght"
+    },
+    {
+        "accountNo": "poiuytrewq1",
+        "acctType": "Savings",
+        "balance": 10000.0,
+        "ownerId": "uijklopt543ght"
+    }
+]

@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator dbml {
+  provider = "prisma-dbml-generator"
+}
+
+datasource db {
+  // provider = "postgresql"
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Owner {
+  id        String    @id @default(cuid())
+  firstName String
+  lastName  String
+  email     String    @unique
+  accounts  Account[]
+}
+
+model Account {
+  accountNo    String        @id @default(cuid())
+  acctType     String
+  // acctType     AccountType
+  balance      Float
+  transactions Transaction[]
+  owner        Owner         @relation(fields: [ownerId], references: [id])
+  ownerId      String
+}
+
+model Transaction {
+  transId   Int      @id @default(autoincrement())
+  transType String
+  // transType TransactionType
+  amount    Float
+  date      DateTime @default(now())
+
+  account   Account @relation(fields: [accountNo], references: [accountNo], onUpdate: Cascade, onDelete: Cascade)
+  accountNo String
+}
+
+// enum AccountType {
+//   CURRENT
+//   SAVINGS
+// }
+
+// enum TransactionType {
+//   WITHDRAWAL
+//   DEPOSIT
+// }
+
+// enum is not supported when using SQLite
+// create many is not supported  when using SQLite

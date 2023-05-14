@@ -1,0 +1,151 @@
+[
+    {
+        "id": "ckockkdifg2fpt",
+        "firstName": "John",
+        "lastName": "Doe",
+        "email": "johndoe@gmail.com",
+        "accounts": [
+            {
+                "accountNo": "rsfrg2fprksfrg2fpt",
+                "acctType": "Savings",
+                "balance": 5000.0,
+                "Transaction": [
+                    {
+                        "transId": 1,
+                        "transType": "deposit",
+                        "amount": 1000.0,
+                        "date": "2021-08-16",
+                        "accountNo": "rsfrg2fprksfrg2fpt"
+                    },
+                    {
+                        "transId": 2,
+                        "transType": "Withdraw",
+                        "amount": 500.0,
+                        "date": "2021-08-17",
+                        "accountNo": "rsfrg2fprksfrg2fpt"
+                    }
+                ],
+                "ownerId": "ckockkdifg2fpt"
+            },
+            {
+                "accountNo": "tyufrg2fptksfrg2fpt",
+                "acctType": "Current",
+                "balance": 3500.0,
+                "Transaction": [
+                    {
+                        "transId": 3,
+                        "transType": "Withdraw",
+                        "amount": 1000.0,
+                        "date": "2021-09-16",
+                        "accountNo": "tyufrg2fptksfrg2fpt"
+                    },
+                    {
+                        "transId": 4,
+                        "transType": "Withdraw",
+                        "amount": 500.0,
+                        "date": "2021-10-17",
+                        "accountNo": "tyufrg2fptksfrg2fpt"
+                    }
+                ],
+                "ownerId": "ckockkdifg2fpt"
+            }
+        ]
+    },
+    {
+        "id": "dfghfrjki756gh",
+        "firstName": "Alice",
+        "lastName": "Smith",
+        "email": "alicesmith@gmail.com",
+        "accounts": [
+            {
+                "accountNo": "asw2rtyuio9",
+                "acctType": "Current",
+                "balance": 100.0,
+                "Transaction": [
+                    {
+                        "transId": 5,
+                        "transType": "deposit",
+                        "amount": 100.0,
+                        "date": "2021-09-01",
+                        "accountNo": "asw2rtyuio9"
+                    },
+                    {
+                        "transId": 6,
+                        "transType": "Withdraw",
+                        "amount": 50.0,
+                        "date": "2021-09-02",
+                        "accountNo": "asw2rtyuio9"
+                    }
+                ],
+                "ownerId": "dfghfrjki756gh"
+            },
+            {
+                "accountNo": "asw2rtyuio0",
+                "acctType": "Savings",
+                "balance": 500.0,
+                "Transaction": [
+                    {
+                        "transId": 7,
+                        "transType": "deposit",
+                        "amount": 500.0,
+                        "date": "2021-09-01",
+                        "accountNo": "asw2rtyuio0"
+                    },
+                    {
+                        "transId": 8,
+                        "transType": "Withdraw",
+                        "amount": 100.0,
+                        "date": "2021-09-02",
+                        "accountNo": "asw2rtyuio0"
+                    }
+                ],
+                "ownerId": "dfghfrjki756gh"
+            }
+        ]
+    },
+    {
+        "id": "uijklopt543ght",
+        "firstName": "Bob",
+        "lastName": "Johnson",
+        "email": "bobjohnson@gmail.com",
+        "accounts": [
+            {
+                "accountNo": "zxcvbnmlkpj",
+                "acctType": "Current",
+                "balance": 2500.0,
+                "Transaction": [
+                    {
+                        "transId": 1,
+                        "transType": "deposit",
+                        "amount": 2000.0,
+                        "date": "2021-08-30",
+                        "accountNo": "zxcvbnmlkpj"
+                    },
+                    {
+                        "transId": 2,
+                        "transType": "Withdraw",
+                        "amount": 500.0,
+                        "date": "2021-08-31",
+                        "accountNo": "zxcvbnmlkpj"
+                    }
+                ],
+                "ownerId": "uijklopt543ght"
+            },
+            {
+                "accountNo": "poiuytrewq1",
+                "acctType": "Savings",
+                "balance": 10000.0,
+                "Transaction": [
+                    {
+                        "transId": 3,
+                        "transType": "deposit",
+                        "amount": 10000.0,
+                        "date": "2021-09-01",
+                        "accountNo": "poiuytrewq1"
+                    }
+                ],
+                "ownerId": "uijklopt543ght"
+            }
+        ]
+    }
+]
