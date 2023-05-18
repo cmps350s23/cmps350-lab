@@ -1,0 +1,39 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String    @id @default(cuid())
+  email        String?
+  createdAt    DateTime  @default(now())
+  registeredAt DateTime?
+  ideas        Idea[]
+}
+
+model Idea {
+  id        String    @id @default(cuid())
+  title     String
+  createdAt DateTime  @default(now())
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  IdeaTag   IdeaTag[]
+}
+
+model Tag {
+  id      String    @id @default(cuid())
+  IdeaTag IdeaTag[]
+}
+
+model IdeaTag {
+  idea   Idea   @relation(fields: [ideaId], references: [id])
+  tag    Tag    @relation(fields: [tagId], references: [id])
+  ideaId String
+  tagId  String
+
+  @@id([ideaId, tagId])
+}
