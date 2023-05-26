@@ -65,25 +65,25 @@ export default function Home() {
           onChange={async (event) => {
             let success = false;
             const files = event.target.files;
-            if (files.length) {
-              for (let k = 0; k < files.length; k += 1) {
-                const formData = new FormData();
-                formData.append("file", files[k]);
+            // if (files.length) {
+            for (let k = 0; k < files.length; k += 1) {
+              const formData = new FormData();
+              formData.append("file", files[k]);
 
-                const response = await fetch("/api/documents", {
-                  method: "POST",
-                  body: formData,
-                });
-                if (response.ok) {
-                  success = true;
-                }
+              const response = await fetch("/api/documents", {
+                method: "POST",
+                body: formData,
+              });
+              if (response.ok) {
+                success = true;
               }
-
-              if (success) {
-                setStale(true);
-              }
-              event.target.value = "";
             }
+
+            if (success) {
+              setStale(true);
+            }
+            event.target.value = "";
+            // }
           }}
         />
       </form>

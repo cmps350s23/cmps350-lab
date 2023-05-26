@@ -6,6 +6,7 @@ export async function GET(request) {
     select: {
       id: true,
       name: true,
+      size: true,
       type: true,
     },
   });
